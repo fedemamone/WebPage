@@ -1,4 +1,6 @@
-window.onscroll = function() {stick()};
+window.onscroll = function () {
+  stick()
+};
 
 var navbar = document.getElementById("navbar");
 var sticky = 55
