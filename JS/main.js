@@ -12,3 +12,10 @@ function stick() {
     navbar.classList.remove("sticky");
   }
 }
+
+$(document).ready(function(){
+  $("#bHTML").click(function(){
+      $("#home").hide();
+      $("#HTML").show();
+  });
+});
