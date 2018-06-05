@@ -2,20 +2,40 @@ window.onscroll = function () {
   stick()
 };
 
-var navbar = document.getElementById("navbar");
-var sticky = 55
-
 function stick() {
+
+  var sticky = parseInt($(".main").css("top"));
+
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    $("#navbar").addClass("sticky");
   } else {
-    navbar.classList.remove("sticky");
+    $("#navbar").removeClass("sticky");    
   }
 }
 
 $(document).ready(function(){
+  $("#bHome").click(function(){
+    $("#CSS, #about, #HTML").hide();
+    $("#home").show();
+    $("#bHome").addClass("active");
+    $("#bHTML, #bCSS, #bAbout").removeClass("active");
+  });
   $("#bHTML").click(function(){
-      $("#home").hide();
-      $("#HTML").show();
+    $("#home, #CSS, #about").hide();
+    $("#HTML").show();
+    $("#bHTML").addClass("active");
+    $("#bHome, #bCSS, #bAbout").removeClass("active");
+  });
+  $("#bCSS").click(function(){
+    $("#home, #about, #HTML").hide();
+    $("#CSS").show();
+    $("#bCSS").addClass("active");
+    $("#bHome, #bHome, #bAbout").removeClass("active");    
+  });
+  $("#bAbout").click(function(){
+    $("#home, #CSS, #HTML").hide();
+    $("#about").show();
+    $("#bAbout").addClass("active");
+    $("#bHome, #bCSS, #bHTML").removeClass("active");
   });
 });
