@@ -14,6 +14,11 @@ function stick() {
 }
 
 $(document).ready(function(){
+
+  $("#login").click(function(){
+    $('#loginModal').modal('toggle');
+  });
+
   $("#bHome").click(function(){
     $("#CSS, #about, #HTML").hide();
     $("#home").show();
@@ -30,7 +35,7 @@ $(document).ready(function(){
     $("#home, #about, #HTML").hide();
     $("#CSS").show();
     $("#bCSS").addClass("active");
-    $("#bHome, #bHome, #bAbout").removeClass("active");    
+    $("#bHome, #bHTML, #bAbout").removeClass("active");    
   });
   $("#bAbout").click(function(){
     $("#home, #CSS, #HTML").hide();
